@@ -1,0 +1,48 @@
+{%  extends "::layout/layout.html.twig" %}
+    {% block body %}
+        <div class="container">
+            {% include '::modulesUsed/navigation.html.twig' %}
+
+            <div class="row">
+                <div class="col-md-3">
+                    {% include "::modulesUsed/sidebar_profile.html.twig" %}
+                </div>
+                <div class="col-md-8">
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">Mes factures</div>
+                        <div class="panel-body">
+                            <p>...</p>
+                        </div>
+
+                        <!-- Table -->
+                        <table class="table">
+                            <thead>
+                            <th>Références</th>
+                            <th>Date</th>
+                            <th>Prix TTC</th>
+                            <th> </th>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>AB33455</td>
+                                <td>24/07/2015</td>
+                                <td>43,23€</td>
+                                <td><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></td>
+                            </tr>
+                            <tr>
+                                <td>AB33455</td>
+                                <td>24/07/2015</td>
+                                <td>43,23€</td>
+                                <td><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        {% include '::modulesUsed/footer.html.twig' %}
+    {%  endblock %}

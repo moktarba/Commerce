@@ -1,0 +1,63 @@
+{%  extends "::layout/layout.html.twig" %}
+    {% block body %}
+        <div class="container">
+            {% include '::modulesUsed/navigation.html.twig' %}
+
+            <div class="row">
+                <div class="col-md-3">
+                    {% include "::modulesUsed/sidebar_profile.html.twig" %}
+                </div>
+                <div class="col-md-8">
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">Mon Panier</div>
+                        <div class="panel-body">
+                            <p>...</p>
+                        </div>
+
+                        <!-- Table -->
+                        <table class="table">
+                            <thead>
+                            <th>Références</th>
+                            <th>Quantité</th>
+                            <th>Prix Unitaire</th>
+                            <th>Total HT </th>
+                            <th> </th>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>AB33455</td>
+                                <td>
+                                    <input type="number" class="">
+                                    <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                </td>
+                                <td>43,23€</td>
+                                <td>43,23€</td>
+                            </tr>
+                            <tr>
+                                <td>AB33455</td>
+                                <td>
+                                    <input type="number" class="">
+                                    <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                </td>
+                                <td>43,23€</td>
+                                <td>43,23€</td>
+                            </tr>
+                            </tbody>
+
+                        </table>
+                        <div class="recapitulatif pull-right">
+                            <span>Total HT : 86,46€</span><br>
+                            <span>TVA  : 20€</span><br>
+                            <span>Total  : 106,46€</span><br>
+                            <button type="submit" class="btn btn-success btn-sm">Valider mon panier</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        {% include '::modulesUsed/footer.html.twig' %}
+    {%  endblock %}

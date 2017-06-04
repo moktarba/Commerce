@@ -1,0 +1,37 @@
+{%  extends "::layout/layout.html.twig" %}
+    {% block body %}
+        <div class="container">
+            {% include '::modulesUsed/navigation.html.twig' %}
+
+            <div class="row">
+                <div class="col-md-3">
+                    {% include "::modulesUsed/sidebar_profile.html.twig" %}
+                </div>
+                <div class="col-md-8">
+                    <h2>Modifier mes Informations</h2>
+                    <label for="username">Nom d'utilisateur</label>
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon" id="sizing-addon1">@</span>
+                        <input type="text" class="form-control" placeholder="Username" name="username" aria-describedby="sizing-addon1">
+                    </div>
+                    <br>
+                    <label for="email">Adresse Email</label>
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon" id="sizing-addon1">@</span>
+                        <input type="text" class="form-control" placeholder="Username" name="email" aria-describedby="sizing-addon1">
+                    </div>
+                    <br>
+                    <label for="password">Mot de passe</label>
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon" id="sizing-addon1">@</span>
+                        <input type="text" class="form-control" placeholder="Username" name="password" aria-describedby="sizing-addon1">
+                    </div>
+                    <br>
+                    <br>
+                    <button type="button" class="btn btn-primary btn-sm">Modifier</button>
+                </div>
+            </div>
+
+        </div>
+        {% include '::modulesUsed/footer.html.twig' %}
+    {%  endblock %}

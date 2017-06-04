@@ -1,0 +1,31 @@
+{% extends '::layout/layout.html.twig' %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+
+{% block body %}
+<div class="container">
+    {% include '::modulesUsed/navigation.html.twig' %}
+    <div class="row">
+        <div class="col-md-4">
+            {% include '::modulesUsed/sidebar_profile.html.twig' %}
+
+        </div>
+        <div class="col-md-8 ">
+            <h2>Modifier Mon profil</h2>
+                <div class="">
+                    {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
+                    <div class="input-lg">
+                        {{ form_widget(form) }}
+                    </div>
+                     <div class="input-lg">
+                     </div>
+                    <br>
+                </div>
+            <input class="btn btn-primary btn-lg"  type="submit" value="{{ 'Valider'|trans }}" /><br>
+            {{ form_end(form) }}
+
+            {% include '::modulesUsed/footer.html.twig' %}
+        </div>
+    </div><br>
+</div>
+{% endblock %}

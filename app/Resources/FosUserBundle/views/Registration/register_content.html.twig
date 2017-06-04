@@ -1,0 +1,22 @@
+{% extends "::layout/layout.html.twig" %}
+{% trans_default_domain 'FOSUserBundle' %}
+{% block body %}
+    <div class="container">
+        {% include '::modulesUsed/navigation.html.twig' %}
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-8">
+                <h2>Inscription</h2>
+                {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+                <div class="col-md-4 col-xs-8 col-xs-offset-2 input-lg">
+                        <div>{{ form_widget(form) }}</div><br>
+                        <input  type="submit" value="{{ 'registration.submit'|trans }}" /><br>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+        {% include '::modulesUsed/footer.html.twig' %}
+    </div>
+{% endblock %}
+
